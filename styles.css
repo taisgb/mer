@@ -224,7 +224,11 @@ body {
     }
     
     .nav-menu.active {
+        background: rgba(224, 148, 153, 0.95);
         right: 0;
+        opacity: 100 !important;
+        display: block;
+        visibility: visible;        
         gap: 6px !important;
         padding: 50px 20px;
         margin: 0;
