@@ -30,6 +30,11 @@ body {
     padding-bottom: 0 !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -359,7 +364,6 @@ body.menu-open {
 
 }
 
-
 /* Hero Section */
 .hero {
     background: var(--cor-fundo);
@@ -423,7 +427,6 @@ body.menu-open {
     font-size: 0.9rem;
     text-transform: uppercase;
 }
-
 
 .hero-buttons {
     display: flex;
@@ -585,10 +588,7 @@ body.menu-open {
         margin: 0 auto;
         display: block;
     }
-
-
 } 
-
 
 /* Sobre nós Section */
 .sobre {
@@ -607,7 +607,6 @@ body.menu-open {
     border-radius: 40px;
     width: fit-content;
     justify-self: center;
-
 }
 
 .sobre-content {
@@ -2079,9 +2078,7 @@ body.menu-open {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 800px) {
-
-  
+@media (max-width: 800px) {  
 
     .comparison-grid {
         grid-template-columns: 1fr;
@@ -2149,25 +2146,6 @@ body.menu-open {
     justify-content: center;
     flex-wrap: wrap;
 } 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
-
-
-
-
-
-
-
-@media (max-width: 800px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-} 
-
-
 
 /* Botão flutuante WhatsApp */
 .whatsapp-sticky {
