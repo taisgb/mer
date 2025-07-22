@@ -224,12 +224,14 @@ body {
         width: 100%;
         text-align: center;
         padding: 10px 0;
+        gap: 1px;
     }
     
     .nav-menu a {
         display: block;
         padding: 5px;
         font-size: 1.2rem;
+        gap: 1px;
     }
 
     .nav-menu a:hover {
