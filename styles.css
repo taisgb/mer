@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     background: linear-gradient(135deg, var(--cor-destaque), #e88a8f);
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     z-index: 3000;
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     position: relative;
     z-index: 2;
 }
@@ -472,7 +472,7 @@ body.menu-open {
 .btn-primary:hover {
     background: var(--cor-destaque);
     color: var(--cor-acento);
-    border-color: var(--cor-acento);
+    border: 2px solid var(--cor-acento);
     box-shadow: 0 6px 20px rgba(222, 153, 159, 0.4);
     transform: translateY(-2px);
 }
@@ -1015,7 +1015,7 @@ body.menu-open {
 .cta .btn-primary:hover {
     background: var(--cor-destaque);    
     color: var(--cor-acento);
-    border-color: var(--cor-acento);
+    border: 2px solid var(--cor-acento);
 }
 
 .cta .btn-secondary {
@@ -1026,7 +1026,7 @@ body.menu-open {
 .cta .btn-secondary:hover {
     background: var(--cor-destaque);
     color: var(--cor-acento);
-    border-color: var(--cor-acento);
+    border: 2px solid var(--cor-acento);
 }
 
 .btn-tertiary {
@@ -1040,12 +1040,10 @@ body.menu-open {
 .btn-tertiary:hover {
     background: var(--cor-acento);
     color: var(--cor-fundo);
-    border-color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
     box-shadow: 0 6px 20px rgba(77, 34, 34, 0.4);
     transform: translateY(-2px);
 }
-
-
 
 /* CTA Section images */
 .cta-images {
@@ -1588,27 +1586,24 @@ body.menu-open {
         font-weight: 700;
         text-align: justify;
     }
-    /* Reduz o tamanho da fonte do parágrafo de descrição */
+    
     .result-card p {
         font-size: 1rem;
         line-height: 1.6;
         text-align: justify;
     }
 
-    /* Ajusta o botão para não ficar desproporcional */
     .result-card .button {
         padding: 12px 22px;
         font-size: 0.95rem;
     }
 
-    /* Reduz o padding interno do card de resultado para dar mais espaço ao texto */
     .result-card {
         padding: 5px 10px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    /* Diminui o título principal do resultado para evitar quebra e vazamento */
     .result-card h2 {
         font-size: 1.5rem; 
         line-height: 0.9;  
@@ -1809,7 +1804,7 @@ body.menu-open {
 
 /* Quando o item está ativo, o botão pode ter uma cor de fundo */
 .faq-item.active .faq-question {
-    background-color: #E7E2E4FF;
+    background-color: rgba(222, 153, 159, 0.2);
 }
 
 /* Gira o ícone '+' para parecer um 'x' */
@@ -1819,13 +1814,13 @@ body.menu-open {
 
 /* Expande a resposta */
 .faq-item.active .faq-answer {
-    max-height: 500px; /* Um valor alto o suficiente para qualquer resposta */
+    max-height: 500px; 
     padding-bottom: 25px;
 }
 
 @media (max-width: 800px) {
     .faq-item.active .faq-answer {
-        max-height: 1000px; /* Um valor alto o suficiente para qualquer resposta */
+        max-height: 1000px; 
         padding-bottom: 25px;
     }
 
@@ -1868,6 +1863,8 @@ body.menu-open {
     transform: translateX(-50%);
 }
 
+
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr; 
@@ -1881,6 +1878,10 @@ body.menu-open {
     }
     .section-title {
         font-size: 2.25rem; 
+    }
+
+    .social-column{
+        margin-right: 20px;
     }
     
 }
@@ -1941,8 +1942,8 @@ body.menu-open {
 .social-button {
     display: inline-flex;
     align-items: center;
-    background-color: var(--cor-acento); 
-    color: var(--cor-destaque);
+    background-color: var(--cor-destaque); 
+    color: var(--cor-acento);
     padding: 0.8rem 1.2rem; 
     border-radius: 9999px; 
     font-weight: 600; 
@@ -1950,11 +1951,13 @@ body.menu-open {
     text-decoration: none;
     transition: all 0.3s;
     margin-top: 5px;
+    border: 2px solid var(--cor-acento);
+    box-shadow: 0 6px 20px rgba(222, 153, 159, 0.4);
 }
 
 .social-button:hover {
-    background-color: var(--cor-destaque); 
-    color: var(--cor-acento);
+    background-color: var(--cor-acento); 
+    color: var(--cor-destaque);
     transform: scale(1.05); 
 }
 
@@ -1962,6 +1965,10 @@ body.menu-open {
     width: 1.5rem; 
     height: 1.5rem; 
     margin-right: 0.5rem; 
+}
+
+.fa-envelope {
+    margin-right: 5px;
 }
 
 /* Coluna da Direita: Formulário */
@@ -2056,10 +2063,10 @@ body.menu-open {
     font-size: 0.8rem;
     color: var(--cor-fundo);
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0px;
     line-height: 1.8;
-    padding: 0px 0px;
+    padding: 5px 0px;
 }
 
 .footer-copyright-small {   
