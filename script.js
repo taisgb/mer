@@ -34,7 +34,7 @@ let scrollPosition = 0;
 
 function openMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
+    /* const menuOverlay = document.getElementById('menu-overlay'); */
     const closeMenu = document.getElementById('close-menu');
     const body = document.body;
     
@@ -42,9 +42,9 @@ function openMobileMenu() {
     scrollPosition = window.pageYOffset;
     
     navMenu.classList.add('active');
-    menuOverlay.classList.add('active');
+    /* menuOverlay.classList.add('active'); */
     closeMenu.style.display = 'block';
-    body.style.overflow = 'hidden';
+    body.style.overflow = 'hidden'; // Impede o scroll do fundo
     
     // Tratamento especial para iOS
     if (isIOS) {
@@ -52,16 +52,17 @@ function openMobileMenu() {
         body.style.top = `-${scrollPosition}px`;
     }
     body.style.width = '100%';
+    body.style.height = '100%';
 }
 
 function closeMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
+    /* const menuOverlay = document.getElementById('menu-overlay'); */
     const closeMenu = document.getElementById('close-menu');
     const body = document.body;
     
     navMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
+    /* menuOverlay.classList.remove('active'); */
     closeMenu.style.display = 'none';
     body.style.overflow = '';
     
@@ -72,6 +73,7 @@ function closeMobileMenu() {
         window.scrollTo(0, scrollPosition);
     }
     body.style.width = '';
+    body.style.height = '';
 }
 
 
