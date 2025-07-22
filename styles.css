@@ -219,6 +219,12 @@ body {
     
     .nav-menu.active {
         right: 0;
+        gap: 1px !important;
+        padding: 50px 20px;
+        margin: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
     }
     
     .nav-menu li {
