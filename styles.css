@@ -442,7 +442,6 @@ body {
     .hero {
         margin-bottom: 32px;
         position: relative;
-        z-index: 1;
     }
 
     .hero-buttons {
