@@ -202,16 +202,18 @@ body {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 75%;
         max-width: 300px;
         height: 100vh;
-        background: rgba(232, 165, 184, 0.98);
+        background: rgba(224, 148, 153, 0.95);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 80px 20px;
+        padding: 50px 20px;
         transition: right 0.3s ease;
         z-index: 1000;
+        gap: 1px;
+        border-radius: 20px 0 0 20px;
     }
     
     .nav-menu.active {
@@ -221,13 +223,18 @@ body {
     .nav-menu li {
         width: 100%;
         text-align: center;
-        padding: 15px 0;
+        padding: 10px 0;
     }
     
     .nav-menu a {
         display: block;
-        padding: 12px;
+        padding: 5px;
         font-size: 1.2rem;
+    }
+
+    .nav-menu a:hover {
+        color: var(--cor-acento);
+        text-decoration: underline;
     }
 
     .hamburger.active span:nth-child(1) {
@@ -244,6 +251,12 @@ body {
     
     .close-menu {
         display: block;
+        color: var(--cor-acento);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1002;
     }    
 
     }
