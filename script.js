@@ -25,7 +25,6 @@ function handleScrollAnimations() {
     });
 }
 
-
 // ========== MENU MOBILE ========== //
 
 // Verifica se é iOS
@@ -34,7 +33,6 @@ let scrollPosition = 0;
 
 function openMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    /* const menuOverlay = document.getElementById('menu-overlay'); */
     const closeMenu = document.getElementById('close-menu');
     const body = document.body;
     
@@ -42,7 +40,6 @@ function openMobileMenu() {
     scrollPosition = window.pageYOffset;
     
     navMenu.classList.add('active');
-    /* menuOverlay.classList.add('active'); */
     closeMenu.style.display = 'block';
     body.style.overflow = 'hidden'; // Impede o scroll do fundo
     
@@ -57,12 +54,10 @@ function openMobileMenu() {
 
 function closeMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    /* const menuOverlay = document.getElementById('menu-overlay'); */
     const closeMenu = document.getElementById('close-menu');
     const body = document.body;
     
     navMenu.classList.remove('active');
-    /* menuOverlay.classList.remove('active'); */
     closeMenu.style.display = 'none';
     body.style.overflow = '';
     
@@ -74,6 +69,29 @@ function closeMobileMenu() {
     }
     body.style.width = '';
     body.style.height = '';
+}
+
+// ========== CARROSEL DE DEPOIMENTOS ========== //
+
+let currentIndex = 0;
+
+function showTestemunho(index) {
+  const cards = document.querySelectorAll('.testemunho-card');
+  cards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
+  });
+}
+
+function nextTestemunho() {
+  const cards = document.querySelectorAll('.testemunho-card');
+  currentIndex = (currentIndex + 1) % cards.length;
+  showTestemunho(currentIndex);
+}
+
+function prevTestemunho() {
+  const cards = document.querySelectorAll('.testemunho-card');
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  showTestemunho(currentIndex);
 }
 
 
@@ -125,6 +143,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }); 
     } 
+
+    // Configura carrossel de depoimentos
+    document.querySelector('.carousel-btn.next').addEventListener('click', nextTestemunho);
+    document.querySelector('.carousel-btn.prev').addEventListener('click', prevTestemunho);
+    showTestemunho(currentIndex);
+
 
     // Configura cards com efeito hover
     const cards = document.querySelectorAll('.step-card, .differential-card, .comparison-card');
@@ -196,4 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (telefoneInput) {
         telefoneInput.addEventListener("input", formatPhoneNumber);
     }
+
+
 });
+
+
